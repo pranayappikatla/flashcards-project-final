@@ -15,9 +15,7 @@ function NewDeck() {
 
     createDeck(formData, null)
       .then((deck) => history.push(`/decks/${deck.id}`))
-      .then(() => {
-        setSubmitting(false);
-      })
+      .then(setSubmitting(false))
       .catch(() => {});
   };
 
